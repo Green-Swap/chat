@@ -1,7 +1,7 @@
 const axios = require("axios");
-
+const API_URI =
+  process.env.API_URI || "http://localhost:8080/greenswap/user/token";
 exports.tokenVerification = async (req, res, next) => {
-  console.log("coucou");
   let mail = req.headers.mail;
   let token = req.headers.token;
   let data = JSON.stringify({
@@ -11,7 +11,7 @@ exports.tokenVerification = async (req, res, next) => {
   let config = {
     method: "post",
     maxBodyLength: Infinity,
-    url: "http://localhost:8080/greenswap/user/token",
+    url: API_URI,
     headers: {
       "Content-Type": "application/json",
     },

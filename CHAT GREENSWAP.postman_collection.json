@@ -10,7 +10,18 @@
 			"name": "POST",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJub25lIn0.eyJ1c2VySWQiOjYsImlzQWRtaW4iOmZhbHNlfQ.",
+						"type": "text"
+					},
+					{
+						"key": "mail",
+						"value": "camille.touron.pro@gmail.com",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"mail_from\": \"camille.touron.pro@gmail.com\",\r\n    \"mail_to\": \"camille.touron.pro@gmail.com\",\r\n    \"message\": \"Hello, Bob!\"\r\n}",
@@ -41,7 +52,18 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJub25lIn0.eyJ1c2VySWQiOjEsImlzQWRtaW4iOmZhbHNlfQ.",
+						"type": "text"
+					},
+					{
+						"key": "mail",
+						"value": "camille.touron.pro@gmail.com",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"mail\":\"camille.touron.pro@gmail.com\"\r\n}",
