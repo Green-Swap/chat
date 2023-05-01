@@ -13,7 +13,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJub25lIn0.eyJ1c2VySWQiOjYsImlzQWRtaW4iOmZhbHNlfQ.",
+						"value": "eyJhbGciOiJub25lIn0.eyJ1c2VySWQiOjEsImlzQWRtaW4iOmZhbHNlfQ.",
 						"type": "text"
 					},
 					{
@@ -32,12 +32,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/messages",
+					"raw": "http://l{{host}}:{{port}}/messages",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"l{{host}}"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"messages"
 					]
@@ -74,18 +74,50 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/messages",
+					"raw": "http://{{host}}:{{port}}/messages",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"messages"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "3000",
+			"type": "string"
 		}
 	]
 }
