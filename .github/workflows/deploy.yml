@@ -23,7 +23,7 @@ jobs:
             docker rm mongo || true
             docker rm api || true
             docker rmi chat-mongo || true
-            docker rmi chat-api || true
+            docker rmi chat-api || true 
             docker network create shared-network || true
             cd /app/repos/greenswap-chat
             rm -rf *
