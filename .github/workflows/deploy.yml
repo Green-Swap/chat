@@ -38,7 +38,7 @@ jobs:
             cd chat
             git fetch
             git pull 
-            git checkout dev
+            git checkout main
             git pull 
             echo "============================================== END OF BUILD =============================================="
             echo "============================================== START OF RUN =============================================="
