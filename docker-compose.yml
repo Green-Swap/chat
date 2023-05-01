@@ -11,8 +11,8 @@ services:
     networks:
       - shared-network
     environment:
-      MONGODB_URI: mongodb://mongo:27017/chat
-      API_URI: http://backend_app_1:8080/greenswap/user/token
+      MONGODB_URI: mongodb://156.67.217.63:27017/chat
+      API_URI: http://156.67.217.63:8080/greenswap/user/token
     
   mongo:
     build: ./mongo-docker
