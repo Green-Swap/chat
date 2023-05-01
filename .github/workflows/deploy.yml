@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Multi line script on remote host
         uses: appleboy/ssh-action@master
         id: ssh
