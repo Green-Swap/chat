@@ -21,12 +21,12 @@ jobs:
             docker stop mongo || true
             docker stop api || true
             docker rm mongo || true
-            docker rm api || true
-            docker rmi chat-mongo || true
-            docker rmi chat-api || true 
+            docker rmi $(docker images -aq) || true
             docker network create shared-network || true
             cd /app/repos/greenswap-chat
+            ls -lrta
             rm -rf *
+            ls -lrta
             mkdir backend
             cd backend
             echo ============================================== END OF CLEANING ==============================================
