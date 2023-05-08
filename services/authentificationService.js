@@ -1,6 +1,6 @@
 const axios = require("axios");
 const API_URI =
-  process.env.API_URI || "http://localhost:8080/greenswap/user/token";
+  process.env.API_URI || "http://localhost:8080/greenswap/public/user/token";
 exports.tokenVerification = async (req, res, next) => {
   let mail = req.headers.mail;
   let token = req.headers.token;
