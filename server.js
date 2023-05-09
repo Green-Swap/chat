@@ -4,6 +4,7 @@ const app = express();
 const server = require("http").createServer(app);
 const connexionService = require("./services/connexion");
 const messageRouter = require("./routers/message");
+const cors = require("cors");
 require("dotenv").config();
 
 const io = socketio(server);
