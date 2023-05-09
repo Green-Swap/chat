@@ -2,10 +2,6 @@ const Message = require("../models/message");
 const socketio = require("socket.io");
 
 exports.post = async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "http://10.31.33.10:5174");
-  res.set("Access-Control-Allow-Methods", "POST");
-  res.set("Access-Control-Allow-Headers", "Content-Type");
-
   const io = socketio(req.server);
   const { mail_from, mail_to, message } = req.body;
   const date = new Date();
@@ -35,10 +31,6 @@ exports.post = async (req, res) => {
 };
 
 exports.get = async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "http://10.31.33.10:5174");
-  res.set("Access-Control-Allow-Methods", "GET");
-  res.set("Access-Control-Allow-Headers", "Content-Type");
-
   const { mail } = req.query;
 
   try {
