@@ -15,7 +15,10 @@ const passServer = (req, res, next) => {
   req.server = server;
   next();
 };
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 app.use(express.static("public"));
 app.use(express.json());
 app.use("/messages", passServer, messageRouter);
