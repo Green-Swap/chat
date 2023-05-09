@@ -24,6 +24,7 @@ app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Credentials", true);
   next();
 });
+
 app.use(express.static("public"));
 app.use(express.json());
 app.use("/messages", passServer, messageRouter);
