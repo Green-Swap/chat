@@ -23,6 +23,7 @@ app.use(function (req, res, next) {
     "null",
     "*",
     "http://localhost",
+    "http://156.67.217.63",
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
