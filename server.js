@@ -17,13 +17,17 @@ const passServer = (req, res, next) => {
   next();
 };
 
-const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "null");
+  res.header("Access-Control-Allow-Credentials", "true");
 
-app.use(cors(corsOptions));
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization, mail, token"
+  );
+  next();
+});
+
 app.use(express.static("public"));
 app.use(express.json());
 app.use("/messages", passServer, messageRouter);
