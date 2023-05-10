@@ -20,6 +20,7 @@ const passServer = (req, res, next) => {
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
+app.options("/messages", cors());
 app.use("/messages", passServer, messageRouter);
 
 io.on("connection", (socket) => {
