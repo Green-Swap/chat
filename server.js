@@ -17,10 +17,15 @@ const passServer = (req, res, next) => {
   next();
 };
 
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.static("public"));
 app.use(express.json());
-app.options("/messages", cors());
 app.use("/messages", passServer, messageRouter);
 
 io.on("connection", (socket) => {
