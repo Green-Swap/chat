@@ -7,6 +7,7 @@ API to handle data of messages between users of the greenswap project.
 ### Using docker :
 
 ```
+docker network create shared-network
 docker-compose up -d
 ```
 
@@ -17,5 +18,3 @@ npm start
 ```
 
 ###
-
-Utilisation de docker network create shared-network.
