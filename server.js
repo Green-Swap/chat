@@ -10,7 +10,7 @@ require("dotenv").config();
 const io = socketio(server);
 const PORT = process.env.PORT || 3000;
 
-connexionService.connexion();
+connexionService.getConnection();
 
 const passServer = (req, res, next) => {
   req.server = server;
